@@ -52,3 +52,41 @@ berangkat ke Asia; Singapura minta akses chip AI canggih.
 
 Entri lengkap, teruji, dan sudah di-push ke repo publik. JANGAN submit dari
 sini; submit adalah wewenang agen utama setelah verifikasi independen.
+
+---
+
+## ROUND 2 — poster (sesi perbaikan, 2026-11-19 dini hari WIB)
+
+Diagnosis round 1: halaman koran bersih tapi berupa dinding teks —
+headline kecil, tanpa hierarki visual selain lead, ilustrasi cuma ikon
+jembatan kecil, dan semua berita geopolitik/perang (breadth bidang
+lemah). Pada 300px hampir tidak terbaca.
+
+Round 2 = poster baru `render_poster.py` (PIL, deterministik):
+- Tanggal raksasa "17 NOVEMBER 2026" di masthead navy.
+- Lead visual penuh: ilustrasi jembatan Kerch dengan arch runtuh ke
+  selat + chip statistik (ROAD LINK CUT / RAIL ON ONE TRACK / 1.441
+  drone semalam — hitungan Moskow).
+- Panel berwarna per wilayah/bidang dengan ikon: serangan AS ke Pulau
+  Qeshm, Iran (Reuters); pertemuan pertama Xi–Trump–Putin di Shenzhen;
+  AS kehilangan status eliminasi campak setelah 26 tahun (PAHO/CDC:
+  5.412 kasus 2026, tertinggi 35 tahun; Meksiko & Bolivia juga);
+  COP31 — menteri bertarung soal draft phase-out fosil + $120bn/thn;
+  saham AI menyeret Wall Street turun (NPR). Strip ALSO TODAY: sanksi
+  Inggris 8 firma permukiman, jet Jepang vs pesawat Rusia, Houthi maju
+  di Yaman, Depardieu mengaku bersalah, audit Pentagon gagal ke-9.
+- Semua story terverifikasi dari laporan 17 Nov 2026 (Reuters, AP,
+  PAHO, CDC, Le Monde, NPR). Final U19 India–Pakistan SENGAJA tidak
+  dipakai: pertandingannya 14 Nov, bukan 17 Nov.
+- `main.py` direvisi 2x di sesi ini (docstring round 2 + validasi
+  magic bytes PNG/JPEG) — final content dari >=2 pesan write/edit.
+- Verifikasi: render 2x byte-identik; main.py 2x output byte-identik
+  dengan entry.png; PNG valid 1024x1024, 125.633 byte (<= 1 MiB),
+  sha256 b93392fb9db6436ffae521fae60d435699b1b599e8883367821ad1059fcc5b9d.
+  Pemeriksaan visual 3x (full, crop panel, thumbnail 300px): tidak ada
+  teks terpotong/overlap/garbled; headline terbaca pada 300px.
+- Kit check (worktree, tanpa transkrip): 4 passed (competition_open,
+  snapshot, license_osi, entrypoint), 1 failed transcripts_present —
+  bundle adalah langkah agen utama.
+
+**SIAP SUBMIT ROUND 2 — menunggu agen utama.**

@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""news-image-20261117: copy the front-page image to the output directory.
+"""news-image-20261117: copy the poster image to the output directory.
 
-The entry image (entry.png, a 1024x1024 newspaper front page summing up
-the world news of Tuesday 17 November 2026) lives in this repository next
-to this program. This program copies it, byte for byte, to
-$MAKEFUN_OUTPUT_DIR/entry.png (default /output/entry.png), creating the
-output directory if needed. No network, no randomness: every run writes
-the same bytes. Exit 0 on success.
+Round 2: the entry image (entry.png, a 1024x1024 poster summing up the
+world news of Tuesday 17 November 2026, rendered by render_poster.py)
+lives in this repository next to this program. This program copies it,
+byte for byte, to $MAKEFUN_OUTPUT_DIR/entry.png (default
+/output/entry.png), creating the output directory if needed. No network,
+no randomness: every run writes the same bytes. Exit 0 on success.
 """
 
 import os
@@ -25,6 +25,13 @@ def main():
         return 1
     if os.path.getsize(source) > 1048576:
         print("error: entry.png exceeds the 1 MiB limit", file=sys.stderr)
+        return 1
+    with open(source, "rb") as fh:
+        magic = fh.read(8)
+    is_png = magic.startswith(b"\x89PNG\r\n\x1a\n")
+    is_jpeg = magic.startswith(b"\xff\xd8\xff")
+    if not (is_png or is_jpeg):
+        print("error: entry.png is neither a PNG nor a JPEG", file=sys.stderr)
         return 1
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
