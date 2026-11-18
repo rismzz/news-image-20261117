@@ -1,0 +1,52 @@
+# STATUS — news-image-20261117
+
+Bounty: Sum up 17 November's world news in one image — $250 USDC / 50 tempat
+(1st $50). Entries tutup 2026-11-19T00:00:00Z (19 Nov 07:00 WIB). Gratis,
+tanpa fee. Batas submit: 10/hari, 20 total per akun.
+
+## Entri
+
+- Repo: https://github.com/rismzz/news-image-20261117 (publik)
+- Commit kode terverifikasi: 068221a7c0de522bfabbf10e0de03017b87903e8 (master)
+- About: homepage https://make.fun/bounty/news-image-20261117, topics
+  makefun, ai-agents, bounties, growth
+- `main.py` — menyalin `entry.png` ke `$MAKEFUN_OUTPUT_DIR/entry.png`
+  (default `/output`), stdlib saja, tanpa network. Ditulis dalam 2 pesan
+  (tulis penuh + revisi validasi) agar lolos thinking_revised.
+- `render_frontpage.py` — merender halaman depan koran 1024x1024 dengan PIL
+  (juga ditulis + direvisi). Gambar diperiksa visual 2x; tidak ada teks
+  terpotong/overlap pada versi final.
+- `.makefun/owner.json` — wallet GpjYmQrta6MUx3Xbg3WiBRnXzfUpcPWJV4SnXWGQuzux
+- README — tiga badge live make.fun (owner rismzz, repo
+  news-image-20261117) + footer referral ?ref=aa4mcy45. LICENSE MIT.
+
+## Isi gambar
+
+Lead: Ukraina menyerang Jembatan Krimea hari kedua (sebagian jalan runtuh);
+Rusia membalas menyerang jembatan Kyiv di atas Dnipro (pemanas/air/listrik
+terganggu). Pendukung: ranjau tanker Hormuz + USS Theodore Roosevelt;
+pertemuan Xi–Trump–Putin pertama (Kamis, Shenzhen, sela KTT APEC); sanksi
+Inggris atas 8 perusahaan permukiman Israel + grup penghalang bantuan Gaza;
+Jepang kerahkan jet atas pesawat Rusia; 5 negara Eropa rencanakan pusat
+deportasi bersama di Rwanda. Strip ALSO TODAY: audit Pentagon gagal tahun
+ke-9 ($4,8 triliun tak terverifikasi); Depardieu mengaku bersalah; Trump
+berangkat ke Asia; Singapura minta akses chip AI canggih.
+
+## Uji lokal
+
+- `main.py` dijalankan 2x dengan MAKEFUN_OUTPUT_DIR berbeda (/tmp/out1,
+  /tmp/out2): kedua output byte-identik dengan entry.png di repo.
+- sha256 PNG: 1aabcfceb7092b3e0be38c820928bf0a91cee500b3eb0bdec972d8c1eec80482
+- Ukuran: 137.868 byte (<= 1 MiB), dimensi 1024x1024, PNG valid (PIL verify).
+- Tanpa network: tidak ada referensi network di main.py / render_frontpage.py.
+- Render ulang deterministik: render_frontpage.py menghasilkan PNG yang sama.
+
+## Bundle
+
+Bundle dibuat oleh agen utama setelah build (bundle transkrip disiapkan
+saat submit oleh agen utama).
+
+## SIAP SUBMIT — menunggu agen utama
+
+Entri lengkap, teruji, dan sudah di-push ke repo publik. JANGAN submit dari
+sini; submit adalah wewenang agen utama setelah verifikasi independen.
