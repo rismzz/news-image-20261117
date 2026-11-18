@@ -43,8 +43,10 @@ berangkat ke Asia; Singapura minta akses chip AI canggih.
 
 ## Bundle
 
-Bundle dibuat oleh agen utama setelah build (bundle transkrip disiapkan
-saat submit oleh agen utama).
+- Lokasi bundle transkrip: ~/workspace/makefun/bundles/news-image-20261117.tar.gz
+  (dibuat agen utama/watch dari sesi builder + sesi induk, via kit CLI).
+- Kuota akun (cek read-only 2026-11-18 07:2x WIB): can_submit true, day cap
+  3 (tier negara; maks kompetisi 10/hari), 0 terpakai, hard limit 20 tersisa.
 
 ## SIAP SUBMIT — menunggu agen utama
 
